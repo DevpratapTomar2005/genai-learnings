@@ -1,5 +1,5 @@
-from pydantic import BaseModel, ConfigDict
-from typing import Optional, List, Dict
+from pydantic import BaseModel
+from typing import Optional, List
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
@@ -111,3 +111,4 @@ while True:
 #   🤖:  Using range() is memory-efficient because it generates values one at a time as needed, rather than creating a full list in memory.
 #   🔗: Python Documentation - https://docs.python.org/3/tutorial/controlflow.html#the-range-function
 #   🗣️:  Python
+
