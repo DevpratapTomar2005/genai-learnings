@@ -6,8 +6,8 @@ from langchain_core.runnables import RunnableLambda
 
 load_dotenv()
 
-model1 = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=1.0)
-model2 = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=1.0)
+model = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=1.0)
+
 
 class Report(BaseModel):
     topic: str = Field(description="The topic to search and summarize")
@@ -16,8 +16,8 @@ class Report(BaseModel):
 class ReportSummary(BaseModel):
     summary: str = Field(description="The summary of the report")
 
-structured_model1 = model1.with_structured_output(Report)
-structured_model2 = model2.with_structured_output(ReportSummary)
+structured_model1 = model.with_structured_output(Report)
+structured_model2 = model.with_structured_output(ReportSummary)
 
 template1 = PromptTemplate(
     template="""You are a helpful assistant that search the web for information or to prepare report on topic "{topic}".
