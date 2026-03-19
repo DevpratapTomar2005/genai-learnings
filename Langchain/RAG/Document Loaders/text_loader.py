@@ -22,7 +22,7 @@ prompt = ChatPromptTemplate(
     ]
 )
 
-loader = TextLoader(file_path=os.path.join(BASE_DIR, "docs", "python_basics.txt"))
+loader = TextLoader(file_path=os.path.join(BASE_DIR, "../docs", "python_basics.txt"))
 
 docs = loader.load()
 

@@ -22,7 +22,7 @@ prompt = ChatPromptTemplate(
     ]
 )
 
-loader = PyPDFLoader(file_path=os.path.join(BASE_DIR, "docs", "ds_notes.pdf"))
+loader = PyPDFLoader(file_path=os.path.join(BASE_DIR, "../docs", "ds_notes.pdf"))
 
 docs = loader.load()
 
